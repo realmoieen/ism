@@ -54,6 +54,8 @@ public class MyUI extends UI {
              password.setIcon(VaadinIcons.PASSWORD);
              password.setPlaceholder("******");
              password.setWidth(25, Sizeable.Unit.PERCENTAGE);
+             user.setValue("admin");
+             password.setValue("12345");
              login=new Button("Login");
              login.setWidth(8,Sizeable.Unit.PERCENTAGE);
              login.setClickShortcut(ShortcutAction.KeyCode.ENTER);
@@ -72,9 +74,8 @@ public class MyUI extends UI {
                         + "Pres ESC to proceed",Notification.Type.ERROR_MESSAGE);
             }
         });
-             
-             
-               remember=new CheckBox("Remember Password...");
+        
+             remember=new CheckBox("Remember Password...");
                
                
         form.addComponents(user,password,remember,login);
